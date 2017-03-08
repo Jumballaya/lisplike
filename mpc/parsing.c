@@ -32,8 +32,8 @@ int main(int argc, char** argv) {
     "                                                            \
       number   : /-?[0.0-9.0]+/ ;                                \
       operator : '+' | '-' | '*' | '/' ;                         \
-      expr     : <number> | '(' <expr> <operator> <expr>+ ')' ;  \
-      lispy    : /^/ <expr> <operator> <expr>+ /$/ ;             \
+      expr     : <number> | '(' <operator> <expr>+ ')' ;  \
+      lispy    : /^/ <operator> <expr>+ /$/ ;             \
     ",
     Number, Operator, Expr, Lispy);
 
